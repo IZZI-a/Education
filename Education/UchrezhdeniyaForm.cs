@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Education
 {
-    public partial class UchrezhdeniyaForm : Form
+    public partial class InstitutionsForm : Form
     {
-        public UchrezhdeniyaForm()
+        public InstitutionsForm()
         {
             InitializeComponent();
         }
