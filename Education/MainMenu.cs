@@ -42,9 +42,22 @@ namespace Education
             ReportsForm form = new ReportsForm(_connectionString);
             form.ShowDialog();
         }
-         private void btnDocs_Click(object sender, EventArgs e)
+
+        private void btnDocs_Click(object sender, EventArgs e)
         {
             DocsForm form = new DocsForm(_connectionString);
+            form.ShowDialog();
+        }
+
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            FinanceForm form = new FinanceForm(_connectionString);
+            form.ShowDialog();
+        }
+
+        private void btnAppeals_Click(object sender, EventArgs e)
+        {
+            AppealsForm form = new AppealsForm(_connectionString);
             form.ShowDialog();
         }
 

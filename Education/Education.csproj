@@ -46,6 +46,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -121,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="AddInstitutionForm.resx">
       <DependentUpon>AddInstitutionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocsForm.resx">
+      <DependentUpon>DocsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditInstitutionForm.resx">
       <DependentUpon>EditInstitutionForm.cs</DependentUpon>

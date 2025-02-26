@@ -53,21 +53,21 @@
             // 
             // dtpReportDate
             // 
-            this.dtpReportDate.Location = new System.Drawing.Point(538, 64);
+            this.dtpReportDate.Location = new System.Drawing.Point(528, 65);
             this.dtpReportDate.Name = "dtpReportDate";
-            this.dtpReportDate.Size = new System.Drawing.Size(122, 20);
+            this.dtpReportDate.Size = new System.Drawing.Size(144, 20);
             this.dtpReportDate.TabIndex = 1;
             // 
             // txtReportFile
             // 
-            this.txtReportFile.Location = new System.Drawing.Point(527, 38);
+            this.txtReportFile.Location = new System.Drawing.Point(528, 39);
             this.txtReportFile.Name = "txtReportFile";
             this.txtReportFile.Size = new System.Drawing.Size(144, 20);
             this.txtReportFile.TabIndex = 2;
             // 
             // txtReportPeriod
             // 
-            this.txtReportPeriod.Location = new System.Drawing.Point(527, 12);
+            this.txtReportPeriod.Location = new System.Drawing.Point(528, 13);
             this.txtReportPeriod.Name = "txtReportPeriod";
             this.txtReportPeriod.Size = new System.Drawing.Size(144, 20);
             this.txtReportPeriod.TabIndex = 3;
@@ -75,7 +75,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(476, 19);
+            this.label1.Location = new System.Drawing.Point(477, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 4;
@@ -84,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(485, 41);
+            this.label2.Location = new System.Drawing.Point(486, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 5;
