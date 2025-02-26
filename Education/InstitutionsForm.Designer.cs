@@ -30,12 +30,12 @@
         {
             this.dgvInstitutions = new System.Windows.Forms.DataGridView();
             this.dgvTeachers = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAddInstitution = new System.Windows.Forms.Button();
+            this.btnEditInstitution = new System.Windows.Forms.Button();
             this.btnDeleteInstitution = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddTeacher = new System.Windows.Forms.Button();
+            this.btnDeleteTeacher = new System.Windows.Forms.Button();
             this.btnEditTeacher = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstitutions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeachers)).BeginInit();
@@ -57,24 +57,24 @@
             this.dgvTeachers.Size = new System.Drawing.Size(392, 272);
             this.dgvTeachers.TabIndex = 1;
             // 
-            // btnAdd
+            // btnAddInstitution
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 282);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(169, 64);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Добавить учреждение";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAddInstitution.Location = new System.Drawing.Point(12, 282);
+            this.btnAddInstitution.Name = "btnAddInstitution";
+            this.btnAddInstitution.Size = new System.Drawing.Size(169, 64);
+            this.btnAddInstitution.TabIndex = 2;
+            this.btnAddInstitution.Text = "Добавить учреждение";
+            this.btnAddInstitution.UseVisualStyleBackColor = true;
+            this.btnAddInstitution.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnEdit
+            // btnEditInstitution
             // 
-            this.btnEdit.Location = new System.Drawing.Point(187, 282);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(169, 64);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "Изменить учреждение";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEditInstitution.Location = new System.Drawing.Point(187, 282);
+            this.btnEditInstitution.Name = "btnEditInstitution";
+            this.btnEditInstitution.Size = new System.Drawing.Size(169, 64);
+            this.btnEditInstitution.TabIndex = 3;
+            this.btnEditInstitution.Text = "Изменить учреждение";
+            this.btnEditInstitution.UseVisualStyleBackColor = true;
             // 
             // btnDeleteInstitution
             // 
@@ -94,27 +94,27 @@
             this.btnRefresh.Text = "Обновить";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAddTeacher
             // 
-            this.button1.Location = new System.Drawing.Point(619, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 64);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Добавить педагога";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAddTeacher.Location = new System.Drawing.Point(444, 282);
+            this.btnAddTeacher.Name = "btnAddTeacher";
+            this.btnAddTeacher.Size = new System.Drawing.Size(169, 64);
+            this.btnAddTeacher.TabIndex = 6;
+            this.btnAddTeacher.Text = "Добавить педагога";
+            this.btnAddTeacher.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDeleteTeacher
             // 
-            this.button2.Location = new System.Drawing.Point(444, 279);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 64);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Удалить педагога";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDeleteTeacher.Location = new System.Drawing.Point(531, 352);
+            this.btnDeleteTeacher.Name = "btnDeleteTeacher";
+            this.btnDeleteTeacher.Size = new System.Drawing.Size(169, 64);
+            this.btnDeleteTeacher.TabIndex = 7;
+            this.btnDeleteTeacher.Text = "Удалить педагога";
+            this.btnDeleteTeacher.UseVisualStyleBackColor = true;
             // 
             // btnEditTeacher
             // 
-            this.btnEditTeacher.Location = new System.Drawing.Point(527, 349);
+            this.btnEditTeacher.Location = new System.Drawing.Point(619, 282);
             this.btnEditTeacher.Name = "btnEditTeacher";
             this.btnEditTeacher.Size = new System.Drawing.Size(169, 64);
             this.btnEditTeacher.TabIndex = 8;
@@ -128,16 +128,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnEditTeacher);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDeleteTeacher);
+            this.Controls.Add(this.btnAddTeacher);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDeleteInstitution);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnEditInstitution);
+            this.Controls.Add(this.btnAddInstitution);
             this.Controls.Add(this.dgvTeachers);
             this.Controls.Add(this.dgvInstitutions);
             this.Name = "InstitutionsForm";
             this.Text = "Учреждения";
+            this.Load += new System.EventHandler(this.InstitutionsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInstitutions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeachers)).EndInit();
             this.ResumeLayout(false);
@@ -148,12 +149,12 @@
 
         private System.Windows.Forms.DataGridView dgvInstitutions;
         private System.Windows.Forms.DataGridView dgvTeachers;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAddInstitution;
+        private System.Windows.Forms.Button btnEditInstitution;
         private System.Windows.Forms.Button btnDeleteInstitution;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddTeacher;
+        private System.Windows.Forms.Button btnDeleteTeacher;
         private System.Windows.Forms.Button btnEditTeacher;
     }
 }

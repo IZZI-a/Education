@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Education
 {
-    public partial class InstitutionsForm : Form
+    public partial class EditTeacherForm : Form
     {
-        public InstitutionsForm()
+        public EditTeacherForm()
         {
             InitializeComponent();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
