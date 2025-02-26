@@ -14,56 +14,53 @@ namespace Education
 {
     public partial class Login : Form
     {
-        private string connectionString = "Data Source=.;Initial Catalog=EduDB;Integrated Security=True";
+        private string connectionString = "Data Source=PROK-PC;Initial Catalog=EduDB;Integrated Security=True";
         public Login()
         {
             InitializeComponent();
         }
 
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-            }
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string login = txtLogin.Text;
-            string password = HashPassword(txtPassword.Text);
+            string password = txtPassword.Text; // Хэширование пароля
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(
-                        "SELECT Роль FROM Пользователи WHERE Логин = @login AND Пароль = @password",
-                        conn
-                    );
+                    SqlCommand cmd = new SqlCommand("SELECT Роль FROM Пользователи WHERE Логин=@login AND Пароль=@password", conn);
                     cmd.Parameters.AddWithValue("@login", login);
                     cmd.Parameters.AddWithValue("@password", password);
 
-                    string role = cmd.ExecuteScalar()?.ToString();
+                    object result = cmd.ExecuteScalar();
 
-                    if (role != null)
+                    if (result != null)
                     {
-                        MainMenu mainForm = new MainMenu(role);
+                        string role = result.ToString();
+                        MainMenu mainForm = new MainMenu(role, connectionString); // Передаем connectionString
                         mainForm.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Неверный логин или пароль!");
+                        MessageBox.Show("Ошибка авторизации!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка: {ex.Message}");
+                    MessageBox.Show($"Ошибка подключения к базе данных: {ex.Message}");
                 }
             }
+        }
+
+
+       
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
