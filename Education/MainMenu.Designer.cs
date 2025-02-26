@@ -59,7 +59,7 @@
             this.btnDocs.Name = "btnDocs";
             this.btnDocs.Size = new System.Drawing.Size(232, 45);
             this.btnDocs.TabIndex = 2;
-            this.btnDocs.Text = "Документация";
+            this.btnDocs.Text = "Документы";
             this.btnDocs.UseVisualStyleBackColor = true;
             // 
             // btnFinance

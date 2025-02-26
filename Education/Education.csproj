@@ -123,6 +123,9 @@
     <EmbeddedResource Include="AddInstitutionForm.resx">
       <DependentUpon>AddInstitutionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppealsForm.resx">
+      <DependentUpon>AppealsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocsForm.resx">
       <DependentUpon>DocsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditTeacherForm.resx">
       <DependentUpon>EditTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm.resx">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
