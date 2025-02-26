@@ -78,6 +78,7 @@
             this.btnRefreshFinance.TabIndex = 20;
             this.btnRefreshFinance.Text = "Обновить";
             this.btnRefreshFinance.UseVisualStyleBackColor = true;
+            this.btnRefreshFinance.Click += new System.EventHandler(this.btnRefreshFinance_Click);
             // 
             // btnEditFinance
             // 
@@ -87,6 +88,7 @@
             this.btnEditFinance.TabIndex = 19;
             this.btnEditFinance.Text = "Изменить";
             this.btnEditFinance.UseVisualStyleBackColor = true;
+            this.btnEditFinance.Click += new System.EventHandler(this.btnEditFinance_Click);
             // 
             // btnDeleteFinance
             // 
@@ -96,6 +98,7 @@
             this.btnDeleteFinance.TabIndex = 18;
             this.btnDeleteFinance.Text = "Удалить";
             this.btnDeleteFinance.UseVisualStyleBackColor = true;
+            this.btnDeleteFinance.Click += new System.EventHandler(this.btnDeleteFinance_Click);
             // 
             // btnAddFinance
             // 
@@ -105,6 +108,7 @@
             this.btnAddFinance.TabIndex = 17;
             this.btnAddFinance.Text = "Добавить";
             this.btnAddFinance.UseVisualStyleBackColor = true;
+            this.btnAddFinance.Click += new System.EventHandler(this.btnAddFinance_Click);
             // 
             // dtpFinanceDate
             // 
